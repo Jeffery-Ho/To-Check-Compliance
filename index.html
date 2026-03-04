@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C40Pro 合规文件导航</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --sub: #6b7280;
+      --line: #e5e7eb;
+      --link: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 16px;
+    }
+    .panel, .viewer {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .panel h1 {
+      margin: 0;
+      padding: 16px;
+      font-size: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .panel p {
+      margin: 0;
+      padding: 0 16px 12px;
+      color: var(--sub);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      padding: 0 8px 12px;
+      gap: 4px;
+    }
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: var(--link);
+      padding: 8px;
+      border-radius: 8px;
+      word-break: break-all;
+    }
+    .links a:hover {
+      background: #ecfeff;
+    }
+    .viewer iframe {
+      width: 100%;
+      height: 80vh;
+      border: 0;
+      background: #fff;
+    }
+    @media (max-width: 900px) {
+      .wrap {
+        grid-template-columns: 1fr;
+      }
+      .viewer iframe {
+        height: 70vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="panel">
+      <h1>C40Pro 合规文件</h1>
+      <p>点击左侧链接后，文档会在右侧当前页面内加载。</p>
+      <nav class="links">
+        <a href="Third_Party_Overseas_EN.html" target="docFrame">Third_Party_Overseas_EN.html</a>
+        <a href="Privacy_Policy_Overseas_EN.html" target="docFrame">Privacy_Policy_Overseas_EN.html</a>
+        <a href="User_Agreement_Overseas_EN.html" target="docFrame">User_Agreement_Overseas_EN.html</a>
+        <a href="User_Agreement_Domestic_Zh-hans.html" target="docFrame">User_Agreement_Domestic_Zh-hans.html</a>
+        <a href="User_Agreement_Domestic_EN.html" target="docFrame">User_Agreement_Domestic_EN.html</a>
+        <a href="Privacy_Policy_Domestic_Zh-hans.html" target="docFrame">Privacy_Policy_Domestic_Zh-hans.html</a>
+        <a href="Privacy_Policy_Domestic_EN.html" target="docFrame">Privacy_Policy_Domestic_EN.html</a>
+        <a href="Third_Party_Domestic_EN.html" target="docFrame">Third_Party_Domestic_EN.html</a>
+        <a href="Third_Party_Domestic_zh-hans.html" target="docFrame">Third_Party_Domestic_zh-hans.html</a>
+      </nav>
+    </section>
+
+    <section class="viewer">
+      <iframe name="docFrame" src="Third_Party_Overseas_EN.html" title="合规文件查看器"></iframe>
+    </section>
+  </div>
+</body>
+</html>
